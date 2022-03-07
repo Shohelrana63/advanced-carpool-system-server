@@ -25,11 +25,6 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 client.connect(err => {
   const createTripCollection = client.db("advancedCarpool").collection("trips");
   console.log("successfully run");
-  // const user = {name:"advanced carpool", email:"test@example.com"};
-  // collection.insertOne(user)
-  // .then( () => {
-  //     console.log("insert successfully");
-  // })
 
   //post trip
   app.post("/createTrips", (req, res) => {
